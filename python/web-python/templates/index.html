@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>jpz</title>
+    <link rel="stylesheet" type="text/css" href="static/css/index.css"/>
+    <script type="text/javascript" src="../static/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../static/js/jpz.js"></script>
+    <script>
+        //var jpzAPI = new jpz();
+        function getGroups(){
+            console.log("getGroups");
+            //jpzAPI.getGroups();
+        }
+        function getDBdata(){
+            console.log("getDBdata");
+            //jpzAPI.getDBdata();
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>jpz</h1>
+    </div>
+    <div class="container">
+        <div>
+                <input type="submit" value="getGroups" onclick="getGroups()">
+        <input type="submit" value="getDBdata" onclick="getDBdata()">
+        </div>
+
+    <div id = 'result'></div>
+    <div>
+        <img src="../static/images/cat.jpg" alt="cat" />
+    </div>
+    </div>
+</body>
+</html>
