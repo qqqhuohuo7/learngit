@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>testpage</title>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script>
+function outfun(){
+	$.post("/exam_3/test/logout?"+Math.random(),function(){
+		exam("test");
+	})
+}
+function exam(type){
+	$.post("/exam_3/test/exam?"+Math.random(),function(data){
+		if(data>"0"){
+			window.navigate("test.html");
+		}else if(type=="test"){
+			window.history.back(-1);
+		}
+    });
+}
+</script>
+</head>
+<body>
+天yuu
+<button onclick="outfun()">logOut</button>
+</body>
+</html>
