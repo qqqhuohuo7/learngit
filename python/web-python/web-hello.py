@@ -1,4 +1,3 @@
-
 from flask import Flask ,render_template,request
 app = Flask(__name__)
 
@@ -13,10 +12,12 @@ def index_page():
     print('hello, world')
     return render_template('index.html')
 
-@app.route('/testPost')
+@app.route('/testPost/')
 def testPost():
-    param1 = request.form['param1']
-    print (param1)
+    #param1 = request.form['param1']
+    #print (request.form['param1'])
+    #print (request.form.get('param1'))
+    #print (param1)
     return 'gooooooooooooooooooooooooooood!'
 
 if __name__ == '__main__':
