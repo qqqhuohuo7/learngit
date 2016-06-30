@@ -22,10 +22,10 @@ class Record():
         #fetchmany()方法可以获得多条数据，但需要指定数据的条数
         #info = curr.fetchmany(arr)
         #info为查询到的列表内容
-        sqlStr = 'select service from Server'
+        sqlStr = 'select * from user'
         arr = curr.execute(sqlStr)
         info = curr.fetchmany(arr)
-        print (arr)
+        print (arr,tokenid)
         
 conn.commit()
 curr.close()
