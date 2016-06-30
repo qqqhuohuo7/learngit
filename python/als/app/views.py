@@ -26,7 +26,7 @@ def signin():
 
 @app.route('/addRecord',methods=['POST'])
 def addRecord():
-    Record = swineflu.Record()
+    Record = models.Record()
     tokenid = request.form['tokenid']
     recordLog = request.form['record']
     Record.addRecord(tokenid,recordLog);
