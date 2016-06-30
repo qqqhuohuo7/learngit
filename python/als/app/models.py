@@ -12,7 +12,6 @@ curr = conn.cursor() #创建游标
 sqlStr = 'select username from user'
 arr = curr.execute(sqlStr)
 info = curr.fetchmany(arr)
-curr.execute(sqlStr)
 
 class Record():
     #def __init__(self):

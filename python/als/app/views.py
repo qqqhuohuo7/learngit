@@ -1,7 +1,7 @@
 #-*- coding: UTF-8 -*- 
 
 from app import app
-from models import Record
+import models
 from flask import Flask
 from flask import request
 
@@ -26,6 +26,7 @@ def signin():
 
 @app.route('/addRecord',methods=['POST'])
 def addRecord():
+    Record = swineflu.Record()
     tokenid = request.form['tokenid']
     recordLog = request.form['record']
     Record.addRecord(tokenid,recordLog);
