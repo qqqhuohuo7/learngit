@@ -5,7 +5,8 @@ import MySQLdb
 conn = MySQLdb.connect(user="python",passwd="password",host="127.0.0.1")
 conn.select_db("python") #选择database
 curr = conn.cursor() #创建游标
- 
+
+username = 'test01'
 sqlStr = 'insert into `user` (`id`,`username`) values (%d,"%s")' (1,username) #绑定变量防sql注入
 curr.execute(sqlStr)
 
