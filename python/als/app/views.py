@@ -1,4 +1,7 @@
+#-*- coding: UTF-8 -*- 
+
 from app import app
+from models import Record
 from flask import Flask
 from flask import request
 
@@ -20,3 +23,9 @@ def signin():
     if request.form['username']=='admin' and request.form['password']=='password':
         return '<h3>Hello, admin!</h3>'
     return '<h3>Bad username or password.</h3>'
+
+@app.route('/addRecord',methods=['POST'])
+def addRecord():
+    tokenid = request.form['tokenid']
+    recordLog = request.form['record']
+    Record.addRecord(tokenid,recordLog);
