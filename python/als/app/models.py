@@ -10,8 +10,7 @@ sqlStr = 'insert into `user` (`id`,`username`) values (%d,"%s")' (1,username) #�
 curr.execute(sqlStr)
 
 class Record():
-    def __init__(self):
-        
+    #def __init__(self):
     def addRecord(self,tokenid,record):
         #sqlStr = 'select username from user' #组sql
         #arr = curr.execute(sqlStr)
@@ -19,7 +18,6 @@ class Record():
         #fetchmany()方法可以获得多条数据，但需要指定数据的条数
         #info = curr.fetchmany(arr)
         #info为查询到的列表内容
-
         sqlStr = 'select service from Server'
         arr = curr.execute(sqlStr)
         info = curr.fetchmany(arr)
