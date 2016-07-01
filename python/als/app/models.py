@@ -9,9 +9,9 @@ curr = conn.cursor() #创建游标
 #username = 'test01'
 #sqlStr = 'insert into `user` (`id`,`username`) values (%d,"%s")' (1,username) #绑定变量防sql注入
 
-sqlStr = 'select username from user'
-arr = curr.execute(sqlStr)
-info = curr.fetchmany(arr)
+#sqlStr = 'select username from user'
+#arr = curr.execute(sqlStr)
+#info = curr.fetchmany(arr)
 
 class Record():
     #def __init__(self):
@@ -26,7 +26,6 @@ class Record():
         arr = curr.execute(sqlStr)
         info = curr.fetchmany(arr)
         print (arr,tokenid)
-        
-conn.commit()
-curr.close()
-conn.close()
+        conn.commit()
+        curr.close()
+        conn.close()
