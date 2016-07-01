@@ -29,4 +29,4 @@ def addRecord():
     Record = models.Record()
     tokenid = request.form['tokenid']
     recordLog = request.form['record']
-    Record.addRecord(tokenid,recordLog);
+    return Record.addRecord(tokenid,recordLog);

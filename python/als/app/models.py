@@ -30,3 +30,4 @@ class Record():
         conn.commit()
         curr.close()
         conn.close()
+        return tokenid+arr
